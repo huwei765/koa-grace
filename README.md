@@ -37,6 +37,14 @@ Change `config.mongo.blog` to your local mongodb path:
 	
 	$ npm run dev
 
+在windows环境中启动debug模式
+    $ set DEBUG=*
+    $ npm run dev
+
+在linux环境中启动debug模式
+    $export DEBUG=*
+    $npm run dev
+
 And then , you can visit the DEMO at [http://127.0.0.1:3000](http://127.0.0.1:3000/home) .
 
 Or you can visit live DEMO at: http://mlsfe.biz
