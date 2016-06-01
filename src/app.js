@@ -92,8 +92,8 @@ vhosts = vhosts.map(function(item) {
 
   // 配置模板引擎
   let template = (typeof config_template == 'object' ? config_template[appName] : config_template);
-  vapp.use(views(appPath + '/views', {
-    root: appPath + '/views',
+  vapp.use(views(appPath + path.sep + 'views', {
+    root: appPath + path.sep + 'views',
     map: {
       html: template || 'swig'
     },
@@ -102,7 +102,7 @@ vhosts = vhosts.map(function(item) {
 
   // 配置控制器文件路由
   vapp.use(router(vapp, {
-    root: appPath + '/controller',
+    root: appPath + path.sep + 'controller',
     default_path: config_path.default_path[appName],
     domain: item
   }));
